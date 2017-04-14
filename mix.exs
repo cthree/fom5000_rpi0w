@@ -1,4 +1,4 @@
-defmodule NervesSystemRpi0.Mixfile do
+defmodule FOM5000Rpi0w.Mixfile do
   use Mix.Project
 
   @version Path.join(__DIR__, "VERSION")
@@ -6,9 +6,9 @@ defmodule NervesSystemRpi0.Mixfile do
     |> String.strip
 
   def project do
-    [app: :nerves_system_rpi0,
+    [app: :fom5000_rpi0w,
      version: @version,
-     elixir: "~> 1.3",
+     elixir: "~> 1.4",
      compilers: Mix.compilers ++ [:nerves_package],
      description: description(),
      package: package(),
@@ -28,14 +28,14 @@ defmodule NervesSystemRpi0.Mixfile do
 
   defp description do
     """
-    Nerves System - Raspberry Pi Zero and Zero W
+    Nerves System - Feed-O-Matic 5000 + Raspberry Pi Zero W
     """
   end
 
   defp package do
-    [maintainers: ["Timothy Mecklem"],
+    [maintainers: ["Erik Petersen"],
     files: ["LICENSE", "mix.exs", "nerves_defconfig", "nerves.exs", "README.md", "VERSION", "rootfs-additions", "fwup.conf", "cmdline.txt", "linux-4.4.defconfig", "config.txt", "post-createfs.sh"],
      licenses: ["Apache 2.0"],
-     links: %{"Github" => "https://github.com/tmecklem/nerves_system_rpi0"}]
+     links: %{"Github" => "https://github.com/cthree/fom5000_rpi0w"}]
   end
 end
